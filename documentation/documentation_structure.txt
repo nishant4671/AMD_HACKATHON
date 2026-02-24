@@ -1,0 +1,233 @@
+/AEWIS_Project
+│
+├── 01_Product_Definition
+├── 02_Problem_Research
+├── 03_Technical_Architecture
+├── 04_Risk_Engine_Design
+├── 05_UI_UX_Design
+├── 06_Data_Model
+├── 07_Hackathon_Strategy
+├── 08_Testing_Validation
+├── 09_Roadmap_Post_Hackathon
+├── 10_Risks_Limitations
+├── README.md
+
+
+
+01️⃣ Product Definition
+Ask AI for:
+
+Product purpose
+
+Core problem statement
+
+Value proposition
+
+Target users
+
+What it does NOT do
+
+One-line pitch
+
+Long-form explanation
+
+Vision statement
+
+This becomes your foundation document.
+
+02️⃣ Problem Research
+
+Ask AI:
+
+Current workflow in colleges
+
+Why existing ERPs fail at early detection
+
+Market gap analysis
+
+Stakeholder pain points
+
+Institutional constraints
+
+Data availability issues
+
+This gives you judge-level confidence.
+
+03️⃣ Technical Architecture
+
+This is CRITICAL.
+
+Ask AI to define:
+
+Final tech stack (Streamlit + Pandas + Plotly)
+
+Why this stack is optimal for hackathon
+
+App structure (file structure)
+
+Data processing pipeline
+
+State handling strategy
+
+Deployment options (local / cloud)
+
+Scalability path if moving beyond hackathon
+
+This prevents overengineering.
+
+04️⃣ Risk Engine Design
+
+Very important.
+
+Ask AI for:
+
+Formal risk formula
+
+Edge case handling
+
+Override rules
+
+False positive prevention
+
+Risk scoring logic flow diagram
+
+Future ML integration path
+
+This is your intellectual core.
+
+05️⃣ UI / UX Design
+
+Ask AI:
+
+Dashboard layout structure
+
+Admin view design
+
+Teacher view design
+
+Interaction flow
+
+Chart types
+
+Heatmap structure
+
+Demo UX psychology
+
+This makes demo smooth.
+
+06️⃣ Data Model
+
+Ask AI to define:
+
+Required CSV schema
+
+Field definitions
+
+Data normalization logic
+
+Relationship between entities
+
+How to scale to multi-college
+
+Optional future fields
+
+This protects you later.
+
+07️⃣ Hackathon Strategy
+
+Ask AI for:
+
+30-sec pitch script
+
+4-min demo script
+
+Judge psychology breakdown
+
+What to emphasize
+
+What to avoid
+
+Backup demo strategy
+
+Submission checklist
+
+This wins hackathons.
+
+08️⃣ Testing & Validation
+
+Ask AI:
+
+Edge case scenarios
+
+Sample synthetic dataset design
+
+Testing checklist
+
+Demo rehearsal checklist
+
+Failure recovery plan
+
+You need this as solo builder.
+
+09️⃣ Roadmap (Post Hackathon)
+
+Ask AI:
+
+Phase 2 features
+
+ERP API integration
+
+ML-based prediction roadmap
+
+Automation roadmap
+
+Multi-tenant SaaS path
+
+Infrastructure changes required
+
+This shows maturity.
+
+🔟 Risks & Limitations
+
+Ask AI:
+
+Technical risks
+
+Adoption risks
+
+Data quality risks
+
+Scaling risks
+
+Legal/privacy risks
+
+Scope creep risks
+
+Judges LOVE awareness of limitations.
+
+README.md (Very Important)
+
+Should contain:
+
+Project overview
+
+Quick start guide
+
+Tech stack
+
+File structure
+
+How to run
+
+Demo flow
+
+Screenshots
+
+Future scope
+
+This makes your project professional.
+
+
+
+
+

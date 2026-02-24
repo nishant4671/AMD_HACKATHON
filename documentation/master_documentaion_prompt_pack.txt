@@ -1,0 +1,289 @@
+Good.
+
+Now we are entering **professional execution mode**.
+
+You want:
+
+👉 A separate high-quality prompt
+👉 For EACH documentation file
+👉 So your other AI generates them individually
+👉 Structured, implementation-ready
+👉 Hackathon-optimized
+👉 Future-scalable
+
+I will give you elite-level prompts.
+
+You copy-paste each into your other AI one by one.
+
+No fluff. No repetition. Clean and powerful.
+
+---
+
+# 📁 01_Product_Definition.md
+
+```txt
+Generate a complete Product Definition Document for my project:
+
+Academic Early Warning & Intervention System (AEWIS)
+
+Context:
+- Hackathon project
+- Built solo
+- Streamlit + Python stack
+- CSV-based data ingestion
+- Focus on early academic risk detection and intervention tracking
+
+Include:
+
+1. Problem Statement (real-world context in colleges)
+2. Why current ERP systems fail at early detection
+3. Target users and stakeholders
+4. Core value proposition
+5. MVP feature list (strictly minimal)
+6. Explicit non-goals (to prevent scope creep)
+7. One-line pitch
+8. 30-second pitch version
+9. Product positioning (intelligence layer vs ERP replacement)
+10. Clear scope boundaries
+
+Keep it structured, implementation-focused, and hackathon-ready.
+```
+
+---
+
+# 📁 02_Problem_Research.md
+
+```txt
+Generate a detailed Problem & Context Research Document for AEWIS.
+
+Include:
+
+1. Current academic workflow in typical Indian colleges
+2. How attendance and performance are tracked
+3. Pain points in early intervention
+4. Why data is collected but not used proactively
+5. Limitations of existing ERPs (Fedena, Frappe Education, LMS systems)
+6. Institutional adoption constraints
+7. Stakeholder pain breakdown (admin, teacher, student)
+8. Why early warning systems are valuable
+
+Avoid fake statistics. Focus on realistic reasoning.
+Make it analytical and structured.
+```
+
+---
+
+# 📁 03_Technical_Architecture.md
+
+```txt
+Act as a senior systems architect.
+
+Generate a Technical Architecture Document for a Streamlit-based Academic Early Warning System.
+
+Constraints:
+- Solo builder
+- Hackathon timeframe
+- CSV ingestion
+- No overengineering
+
+Include:
+
+1. High-level architecture description
+2. Module/file breakdown
+3. Data ingestion pipeline
+4. Risk scoring pipeline
+5. State management in Streamlit
+6. Performance considerations
+7. Deployment options (local + cloud)
+8. How architecture evolves post-hackathon
+9. Explicit list of what NOT to build
+
+Make it implementation-ready and practical.
+```
+
+---
+
+# 📁 04_Risk_Engine_Design.md
+
+```txt
+Generate a formal Risk Scoring Engine Design Document for AEWIS.
+
+Include:
+
+1. Exact rule-based formula
+2. Risk level definitions
+3. Threshold logic
+4. Edge case handling
+5. Override rules
+6. False positive prevention strategy
+7. Explainability design (why student flagged)
+8. Example scoring walkthrough
+9. Future ML integration path
+
+Be precise and structured.
+```
+
+---
+
+# 📁 05_Data_Model.md
+
+```txt
+Generate a Data Model and CSV Schema Document for AEWIS.
+
+Include:
+
+1. Required CSV fields
+2. Optional fields
+3. Data type definitions
+4. Entity relationships
+5. Data validation rules
+6. Handling missing values
+7. Data normalization approach
+8. Scalability path for multi-college
+9. Example schema table
+
+Keep it clean and technical.
+```
+
+---
+
+# 📁 06_UI_UX_Design.md
+
+```txt
+Act as a UX strategist for hackathon demos.
+
+Generate a UI/UX Design Plan for a Streamlit-based AEWIS app.
+
+Include:
+
+1. Admin dashboard layout
+2. Teacher dashboard layout
+3. Interaction flow
+4. Chart types and heatmap design
+5. Visual hierarchy strategy
+6. Demo storytelling flow
+7. What to avoid in UI
+8. 5-minute demo optimization tips
+
+Focus on clarity and impact.
+```
+
+---
+
+# 📁 07_Hackathon_Strategy.md
+
+```txt
+Act as a hackathon judge and mentor.
+
+Generate a Hackathon Strategy Document for AEWIS.
+
+Include:
+
+1. Final 30-second pitch script
+2. 4-minute demo script
+3. Judge psychology insights
+4. What creates strong impression
+5. Common mistakes to avoid
+6. Backup demo plan
+7. Submission checklist
+8. How to answer tough questions
+
+Make it tactical and competitive.
+```
+
+---
+
+# 📁 08_Testing_Validation.md
+
+```txt
+Act as a QA engineer.
+
+Generate a Testing & Validation Plan for AEWIS.
+
+Include:
+
+1. Edge case scenarios
+2. Data anomaly handling
+3. Risk engine validation checklist
+4. Manual test cases
+5. Demo rehearsal checklist
+6. Failure recovery strategies
+7. Pre-submission sanity checks
+
+Keep it practical for a solo builder.
+```
+
+---
+
+# 📁 09_Risks_Limitations.md
+
+```txt
+Act as a critical product reviewer.
+
+Generate a Risks & Limitations Document for AEWIS.
+
+Include:
+
+1. Technical risks
+2. Data quality risks
+3. Adoption risks
+4. False positive risks
+5. Privacy concerns
+6. Scalability limitations
+7. Hackathon-specific risks
+8. Long-term sustainability challenges
+
+Be brutally realistic.
+```
+
+---
+
+# 📁 10_Roadmap_Post_Hackathon.md
+
+```txt
+Act as a startup roadmap strategist.
+
+Generate a Post-Hackathon Roadmap for AEWIS.
+
+Include:
+
+Phase 1 – Hackathon MVP stabilization
+Phase 2 – Pilot version
+Phase 3 – ERP integration
+Phase 4 – ML prediction layer
+Phase 5 – Multi-tenant SaaS
+
+For each phase include:
+- Feature additions
+- Architecture changes
+- Technical upgrades
+- Business implications
+
+Keep it strategic and realistic.
+```
+
+---
+
+# 📁 README.md
+
+```txt
+Generate a professional GitHub README for AEWIS.
+
+Include:
+
+- Project overview
+- Problem statement
+- Solution summary
+- Tech stack
+- How to run locally
+- Demo flow
+- File structure
+- Screenshots placeholders
+- Future roadmap
+- License placeholder
+
+Make it clean and professional.
+```
+
+---
+

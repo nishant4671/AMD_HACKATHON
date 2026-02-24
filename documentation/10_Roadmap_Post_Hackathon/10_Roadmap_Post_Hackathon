@@ -1,0 +1,140 @@
+# AEWIS Post-Hackathon Roadmap
+
+**Current State:** Hackathon MVP (Streamlit + CSV + Rules)  
+**Timeline:** 6-18 months to revenue  
+**Success Metric:** 3 paying colleges by Month 12  
+**Budget Reality:** Solo bootstrap ($100/month max)  
+
+***
+
+## Phase 1: Hackathon MVP Stabilization (Week 1-2)
+**Goal:** Flawless demo → 1 pilot commit
+
+| Category | Deliverables | Why Critical |
+|----------|--------------|--------------|
+| **Features** | - Demo video + GitHub repo<br>- QR code landing page<br>- 1-click sample CSV generator | Judges need to play post-demo |
+| **Architecture** | - SQLite for upload history<br>- `streamlit-authenticator` (2 users)<br>- Error logging to file | Basic persistence for pilot |
+| **Technical** | - Deploy Streamlit Cloud + Railway ($5/mo)<br>- Automated edge case tests<br>- GitHub Actions CI | Zero-downtime pilot |
+| **Business** | - Pitch 3 faculty contacts<br>- "Free for 100 students" offer<br>- Collect 1 pilot CSV dataset | Validation or death |
+
+**Success:** 1 college testing weekly uploads. **Cost:** $10/mo. **Time:** 10 hours.
+
+***
+
+## Phase 2: Pilot Version (Month 1-3)
+**Goal:** Prove 15% risk reduction with real data
+
+| Category | Deliverables | Why Critical |
+|----------|--------------|--------------|
+| **Features** | - User management (5 colleges)<br>- Historical risk trends<br>- Intervention outcome tracking<br>- PDF risk reports | Pilot colleges need accountability |
+| **Architecture** | - Postgres (Supabase free tier)<br>- Multi-college tenancy (`college_id`)<br>- Weekly CSV scheduled upload | Real colleges = real data volume |
+| **Technical** | - FastAPI backend + Streamlit frontend<br>- Celery for background CSV processing<br>- PostHog analytics | Scales to 10 colleges |
+| **Business** | - 3 college pilots (free)<br>- Track "flags vs actual failures"<br>- Monthly ROI report to principals | Proves product-market fit |
+
+**Success:** 15% fewer failures in intervened classes. **Cost:** $25/mo. **Time:** 80 hours.
+
+***
+
+## Phase 3: ERP Integration (Month 4-6)
+**Goal:** Eliminate manual CSV → $10k ARR
+
+| Category | Deliverables | Why Critical |
+|----------|--------------|--------------|
+| **Features** | - Fedena API plugin<br>- Google Classroom sync<br>- Auto daily attendance pull<br>- Slack/Email risk alerts | CSV fatigue kills adoption |
+| **Architecture** | - Event-driven (webhooks)<br>- Redis cache for real-time<br>- Multi-region Postgres | ERPs push data automatically |
+| **Technical** | - Docker + Railway ($20/mo)<br>- OAuth2 for ERP auth<br>- Airbyte for custom ERPs | 90% Indian colleges covered |
+| **Business** | - ₹500/student/year pricing<br>- 10 paid colleges<br>- HOD demo video series | Manual CSV = 0% retention |
+
+**Success:** 80% data automated. **Cost:** $50/mo. **Time:** 120 hours.
+
+***
+
+## Phase 4: ML Prediction Layer (Month 7-9)
+**Goal:** Predict failures 4 weeks early → Enterprise sales
+
+| Category | Deliverables | Why Critical |
+|----------|--------------|--------------|
+| **Features** | - Dropout prediction (AUC 0.85)<br>- Teacher effectiveness scores<br>- Personalized interventions<br>- "What-if" simulator | Rules → ML = 3x accuracy |
+| **Architecture** | - MLflow model registry<br>- Feature store (Hopsworks)<br>- Online scoring API | Daily predictions at scale |
+| **Technical** | - XGBoost + SHAP explanations<br>- Cron retraining (weekly)<br>- Modal.com inference ($0.10/hr) | Proves 25% dropout reduction |
+| **Business** | - ₹1500/student premium tier<br>- District-level contracts<br>- Academic paper co-authorship | ML = credibility for grants |
+
+**Success:** Predict 80% of failures before Quiz1. **Cost:** $150/mo. **Time:** 200 hours.
+
+***
+
+## Phase 5: Multi-Tenant SaaS (Month 10-18)
+**Goal:** $100k ARR → Raise $500k seed
+
+| Category | Deliverables | Why Critical |
+|----------|--------------|--------------|
+| **Features** | - White-label dashboards<br>- Role-based permissions<br>- Multi-campus support<br>- API for custom integrations | Universities demand enterprise |
+| **Architecture** | - Kubernetes (EKS $100/mo)<br>- Multi-tenant DB (row-level security)<br>- GraphQL API | 1000 colleges scale |
+| **Technical** | - Auth0 + Okta SSO<br>- CDN + CloudFront<br>- SOC2 compliance path | Enterprise sales requirements |
+| **Business** | - $50k university contracts<br>- State education dept partnerships<br>- Affiliate program (ERP resellers) | Winner-take-most market |
+
+**Success:** 50 colleges, $100k ARR. **Cost:** $500/mo. **Exit:** Acquired by PowerSchool/Blackbaud.
+
+***
+
+## Strategic Dependencies & Kill Triggers
+
+| Phase | Must-Hit Metric | Fail → Pivot |
+|-------|-----------------|-------------|
+| **Phase 1** | 1 pilot CSV dataset | Dead project |
+| **Phase 2** | 15% failure reduction | Pure attendance tool |
+| **Phase 3** | 3 paid colleges ($5k ARR) | Consulting services |
+| **Phase 4** | ML AUC > 0.80 | Stay rules-based |
+| **Phase 5** | 20 colleges ($50k ARR) | Sell to ERP vendor |
+
+***
+
+## Solo Builder Reality Check
+
+```
+MVP (Now):           100% solo feasible ✓
+Phase 1-2 (3mo):     100% solo feasible ✓ 
+Phase 3 (ERP):       NEEDS co-founder (sales) ⚠️
+Phase 4 (ML):        NEEDS data scientist ❌
+Phase 5 (SaaS):      NEEDS full team ❌
+```
+
+**Solo Ceiling:** Phase 2 max. $10k ARR then stalls without team.
+
+***
+
+## Funding Path (Bootstrap → VC)
+
+```
+$0 → Hackathon win → Phase 1 ($0)
+$100/mo → Phase 2 pilots ($500 total)
+$1k → Phase 3 sales co-founder equity
+$50k → Phase 4 ML contractor
+$500k → Phase 5 VC seed round
+```
+
+***
+
+## Kill Criteria (Be Ruthless)
+
+| Month | Metric | Action |
+|-------|--------|--------|
+| **Month 3** | 0 pilots | Kill |
+| **Month 6** | <$3k ARR | Pivot to attendance-only |
+| **Month 9** | <10 colleges | Sell IP to ERP |
+| **Month 12** | No sales co-founder | Lifestyle business |
+
+***
+
+## Execution Priority (Next 7 Days)
+
+```
+1. [Today] Deploy hackathon MVP to cloud
+2. [Day 2] Email 5 faculty contacts with demo link
+3. [Week 1] Fix pilot feedback → Phase 1 complete
+4. [Week 2] Secure 1 pilot → Phase 2 begins
+```
+
+**Status: STRATEGICALLY SOUND.** Hackathon win = runway to Phase 2. No pilots by Month 3 = dead. Execute flawlessly. Pivot fast.
+
+**First Milestone:** Deploy live demo by midnight. Pitch faculty tomorrow. Win hackathon first.
