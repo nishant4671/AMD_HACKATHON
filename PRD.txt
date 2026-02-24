@@ -1,0 +1,175 @@
+# AEWIS Product Requirements Document (PRD)
+
+**Version:** 1.0 (Hackathon MVP)  
+**Date:** February 24, 2026  
+**Author:** Senior Product Manager  
+**Status:** APPROVED FOR IMPLEMENTATION  
+
+***
+
+## 1. PRODUCT OVERVIEW
+
+**AEWIS (Academic Early Warning & Intervention System)** is a lightweight analytics platform that transforms existing college attendance and quiz data into actionable early warnings for at-risk students. Admins upload CSV files from any ERP or Excel system, instantly revealing college-wide risk patterns through interactive heatmaps. Teachers receive prioritized lists of students needing intervention with one-click action tracking.
+
+**One-Paragraph Explanation:**  
+Colleges collect rich academic data daily but use it reactively only at exam time. AEWIS changes this by automatically flagging students showing decline patterns (dropping scores, low attendance, poor averages) and providing structured intervention workflows. Rather than replacing ERPs, AEWIS sits on top as an intelligence layer—admins see "Physics is in crisis," teachers see "my 8 at-risk students," and both track if interventions reduce risk counts.
+
+**Elevator Pitch:**  
+*"Upload your college CSV—we flag at-risk students before exam failures."*
+
+***
+
+## 2. PROBLEM STATEMENT
+
+**Academic Workflow Reality:**  
+Indian engineering colleges mandate 75% attendance and conduct weekly quizzes, generating structured data through ERPs (Fedena) or Excel. HODs manually compile reports monthly; teachers spot struggling students anecdotally. By exam eligibility deadlines, interventions become impossible—50-70% of at-risk cases surface too late.
+
+**Why Current Systems Fail:**  
+- ERPs excel at data collection but offer only backward-looking reports
+- No system combines attendance + performance trends into forward-looking flags  
+- Manual analysis doesn't scale beyond 200 students
+- Intervention actions aren't systematically tracked
+
+**Why Early Detection Matters:**  
+Flagging risks after Quiz 3 vs. waiting until semester-end exams enables structured remediation (extra classes, counseling) when outcomes remain changeable. Heatmaps reveal department-wide issues invisible in spreadsheets.
+
+***
+
+## 3. TARGET USERS & STAKEHOLDERS
+
+| **Role** | **Primary Users** | **Goals** | **Pains** |
+|----------|------------------|-----------|-----------|
+| **Admin/HOD** | Primary | Monitor college-wide academic health | Manual Excel scanning across 1000+ students |
+| **Teacher** | Primary | Prioritize intervention targets | Late discovery of struggling students |
+| **Principal** | Buyer | Reduce semester failure rates | Surprised by bulk failures; lacks metrics |
+| **Student** | Future | Self-awareness of risks | No visibility into personal decline patterns |
+
+**Primary Buyer:** Academic HODs in mid-sized private colleges (1500-5000 students).
+
+***
+
+## 4. PRODUCT GOALS
+
+**Hackathon Goals:**
+- Flawless 4-minute live demo with judge CSV upload
+- Top 3 placement through clear problem-solution-impact story
+- 1 faculty pilot commitment post-demo
+
+**Product Goals:**
+- Reduce late-stage risk detection from "exam crunch" to "weekly flags"
+- Enable 80% of high-risk students to receive intervention before Quiz 4
+- Demonstrate 15% risk count reduction through tracked interventions
+
+**Success =** Judges understand workflow in 60 seconds → Principal ROI calculation is obvious.
+
+***
+
+## 5. NON-GOALS (SCOPE LOCK)
+
+| **Explicitly Excluded** | **Reason** |
+|-------------------------|------------|
+| Student-facing dashboard | Doubles UI complexity, low demo value |
+| Teacher matching algorithm | Requires complex availability logic |
+| Resource management (labs/books) | Unrelated to academic risk |
+| Real-time data sync | CSV-first validates core value |
+| Email/SMS notifications | External dependencies kill demo |
+| Mobile app | Desktop HODs are target users |
+| Multi-college tenancy | Single-college demo focus |
+| Predictive ML models | Explainable rules > blackbox for MVP |
+
+**Iron Rule:** Any feature requiring >30min additional build time is CUT.
+
+***
+
+## 6. MVP FEATURE SET
+
+**1. CSV Upload**  
+Admins drag any attendance/quiz CSV → instant validation → success message with row count.
+
+**2. Risk Scoring Engine**  
+Per-subject analysis flags students if ANY condition met:  
+- Attendance < 75%  
+- Score decline ≥15% across 3 quizzes  
+- Subject average < 40%  
+
+**3. Admin Dashboard**  
+- KPI cards: High risk count + trend delta  
+- Subject heatmap (red = crisis subjects like Physics)  
+- Filterable high-risk student table with flag reasons  
+
+**4. Teacher Dashboard**  
+- Personalized at-risk student list (teacher-specific)  
+- One-click intervention toggle per student  
+- Live risk count updates after interventions  
+
+**5. Demo Impact Simulation**  
+Toggle interventions → immediate "risks reduced 15%" metric update.
+
+***
+
+## 7. USER WORKFLOW (HIGH LEVEL)
+
+```
+1. Admin → Upload CSV (any college attendance/quizzes)
+2. System → Auto-generates risk flags + college-wide heatmap
+3. Admin → Spots "Physics cluster red" → Filters high-risk table
+4. Admin → Switches to Teacher view (Ms. Sharma)
+5. Teacher → Sees 8 personal at-risk students → Toggles 3 interventions  
+6. System → Updates "High risks: 42 → 36" across dashboard
+7. Admin → Exports intervention summary
+```
+
+**Total cycle:** 2 minutes from CSV to actionable insights.
+
+***
+
+## 8. SUCCESS CRITERIA
+
+**Hackathon Metrics:**
+- Demo completes without errors 10/10 practice runs
+- Judges can upload their CSV → see personalized risks in <30 seconds
+- "Physics crisis" clearly visible in first 60 seconds
+- Live intervention delta clearly demonstrated
+
+**Usability Targets:**
+- First-time admin comprehends dashboard in 15 seconds  
+- Teacher understands "my 8 students need help" instantly
+- Risk reason column immediately clear ("Decline + Attendance")
+
+**Demo Goal:** Judges leave saying, *"I can see exactly where my college needs help."*
+
+***
+
+## 9. CONSTRAINTS & ASSUMPTIONS
+
+**Constraints:**
+- Solo developer with 6-hour build window remaining
+- Streamlit-only frontend (no custom CSS/React)
+- CSV ingestion exclusively (no APIs/database)
+- 250-line maximum codebase
+- Desktop-first design (laptop presentation)
+
+**Assumptions:**
+- Colleges export attendance/quizzes in consistent CSV format
+- HODs comfortable with weekly manual uploads initially
+- Mid-sized colleges (1500-5000 students) are target sweet spot
+- Faculty will manually toggle interventions during pilot
+
+***
+
+## 10. FUTURE EXPANSION
+
+**Phase 2 (Post-Hackathon):** Automated Fedena API sync eliminates CSV uploads  
+**Phase 3 (Month 3):** ML dropout prediction (rules + historical data)  
+**Phase 4 (Month 6):** Multi-college tenancy + SMS intervention alerts  
+
+**MVP validates core hypothesis:** Colleges need early academic intelligence atop existing data.
+
+***
+
+**APPROVAL REQUIRED:**  
+Product Manager: [ ] Approved for Implementation  
+Engineering: [ ] Confirmed feasible within constraints  
+Demo Complete: [ ] 4-minute flow validated  
+
+**Status:** EXECUTION PHASE.** All decisions finalized. Build exactly to this spec. No scope changes permitted.
