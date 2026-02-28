@@ -1,0 +1,352 @@
+# **AEWIS FINAL FRONTEND ARCHITECTURE BLUEPRINT**  
+## **Complete Vibe Coding Specification (Copy-Paste Ready)**
+
+**For:** Replit Ghostwriter / Claude.ai / Cursor  
+**Build Time:** 18 hours → Demo Ready  
+**Target:** Technical judges + Enterprise impression  
+**Stack:** Streamlit + Plotly + Pandas + Gamification  
+
+***
+
+## 🎯 **ARCHITECTURE OVERVIEW**
+
+```
+SCREEN COUNT: 8 (Enterprise Scale)
+ROLES: Admin (3 screens) | Teacher (3 screens) | Student (2 screens)
+NAVIGATION: Sidebar role switch + Breadcrumb
+DATA FLOW: CSV Upload → Risk Engine → Gamified Dashboards
+```
+
+```
+├── LANDING PAGE (Universal)
+├── 👑 ADMIN (Enterprise Command)
+│   ├── College Overview (Heatmap Crisis)
+│   ├── Risk Analytics (KPIs + Trends)
+│   └── Mentor Assignment (Workflow)
+├── 👩‍🏫 TEACHER (Action Dashboard)  
+│   ├── Student Dashboard (Productivity + XP)
+│   ├── Intervention List (Toggles + Heatmap)
+│   └── Teacher Analytics (Performance)
+└── 🧑‍🎓 STUDENT (Gamified Progress)
+    ├── Personal Dashboard (XP + Risks)
+    └── AI Assistant (Chatbot + Tips)
+```
+
+***
+
+## 📱 **COMPLETE SCREEN SPECIFICATIONS**
+
+### **SCREEN 1: LANDING PAGE**
+```
+**Purpose:** CSV → Instant enterprise metrics (Demo hook)
+**Layout:** Hero → Upload → Quick stats → Role cards
+
+HEADER SECTION (Full Width):
+┌─ AEWIS - Academic Excellence Warning System ───────────────┐
+│ 🚨 Real-time academic risk detection for colleges          │
+│ [Demo Data] [Upload CSV] [Connect ERP]                    │
+└──────────────────────────────────────────────────────────┘
+
+QUICK STATS (3 Columns):
+High Risk: 87 🔴 | Success Rate: 68% 📈 | Physics Crisis 🚨
+
+ROLE CARDS (3 Cards):
+👑 ADMIN: "College-wide crisis monitoring"
+👩‍🏫 TEACHER: "Your at-risk students only"  
+🧑‍🎓 STUDENT: "Track your academic XP"
+```
+
+### **SCREEN 2: ADMIN - COLLEGE OVERVIEW** ⭐ **DEMO KILLER**
+```
+**Purpose:** Heatmap crisis revelation (Judges gasp)
+**Layout:** 30% KPIs | 70% Heatmap
+
+HEADER:
+College Health Score: 72/100 📊 | Last Updated: Just Now
+
+LEFT KPIs (Cards):
+├── High Risk Students: 87 🔴 (-12% vs last week)
+├── Crisis Subjects: 2 🚨 (Physics, Chemistry)  
+├── Intervention Success: 68% 📈 (+5% vs last week)
+└── Mentor Queue: 14 pending 📋
+
+RIGHT HEATMAP (Full Height):
+Subjects vs Students matrix (px.imshow)
+- Physics = Red crisis cluster (35% high risk)
+- Math = Orange warning (22% high risk) 
+- Green = Safe subjects
+- Hover: "S101: Decline 18% + Attendance 62%"
+
+BOTTOM TABLE:
+Top 10 High Risk Students | Subject | Reason | Priority
+```
+
+### **SCREEN 3: ADMIN - RISK ANALYTICS**
+```
+**Purpose:** Deep metrics + trends (Technical depth)
+**Layout:** Charts grid
+
+CHARTS:
+1. Risk Distribution Pie (87 High | 124 Medium | 301 Low)
+2. Subject Risk Bar Chart (Physics worst)
+3. Decline Trends Line Chart (Quiz1→Quiz3)
+4. Attendance vs Performance Scatter
+5. Intervention Impact Before/After
+6. Weekly Risk Evolution
+```
+
+### **SCREEN 4: ADMIN - MENTOR ASSIGNMENT**
+```
+**Purpose:** Workflow sophistication
+**Layout:** Queue + Assignment
+
+MENTOR QUEUE TABLE:
+Student | Risk Level | Subject | Assigned Mentor | Status
+S101    | 🔴 HIGH   | Physics | Pending        | Assign
+
+MENTOR POOL:
+Available: 8 mentors | Top Performer: Ms.Sharma (92% success)
+[Assign Auto] [Assign Manual Dropdown]
+```
+
+### **SCREEN 5: TEACHER - STUDENT DASHBOARD** ⭐ **CORE FUNCTION**
+```
+**Purpose:** Productivity + Gamification (Your sketch DNA)
+**Layout:** Left nav | Main cards | Right mini-heatmap
+
+LEFT NAVIGATION (Your productivity panel):
+📅 Calendar | 📚 Live Lectures | ⏱️ Study Timer | 📝 Notes | ✅ Quizzes
+
+MAIN STUDENT CARDS (Gamified):
+┌─ S101 - Level 12 🏆 ───────────────────────────────┐
+│ XP: 450/1000 📈 | Hours: 28h | Quizzes: 14/20   │
+│ Math: 🟡 Warning (Decline 18%)                   │
+│ Attendance: 68% 🚨 | Next Action: Intervention  │
+└──────────────────────────────────────────────────┘
+
+RIGHT HEATMAP: MY Students only (Filtered crisis view)
+```
+
+### **SCREEN 6: TEACHER - INTERVENTION LIST** ⭐ **IMPACT PROOF**
+```
+**Purpose:** Live action + ROI proof
+**Layout:** Prioritized list + Impact metrics
+
+HEADER:
+Ms.Sharma (Mathematics) | My Students: 42 | Success: 68%
+
+INTERVENTION LIST:
+⬜ S101 | Math | Decline+Attend | Quiz:85→62 | [Toggle] [+25 XP]
+☑ S105 | Math | Chronic Low    | Avg:38%    | Completed [Undo]
+⬜ S112 | Math | Attendance     | 65%        | [Toggle] [+15 XP]
+
+IMPACT METRICS (Live):
+Risks Reduced: 12→8 (-33%) | XP Earned: 245 | Success Rate: 68%
+```
+
+### **SCREEN 7: STUDENT - PERSONAL DASHBOARD**
+```
+**Purpose:** Gamified self-awareness
+**Layout:** Hero XP | Progress metrics | Risk badges
+
+HERO:
+Your Level: 12 🏆 | XP: 450/1000 📈 | Rank: #23/512
+
+PROGRESS METRICS (Your sketch):
+Hours Spent: 28h 📚 | Quizzes: 14/20 ✅ | Classes: 85% 🟢
+
+RISK BADGES:
+🟡 Math Warning: 18% decline detected
+🟢 Physics Stable: Excellent progress
+🔴 Attendance Alert: Below 75% threshold
+
+NEXT ACTIONS:
+[Review Quiz3 Mistakes] [Book Mentor Session]
+```
+
+### **SCREEN 8: STUDENT - AI ASSISTANT**
+```
+**Purpose:** Modern AI touch
+**Layout:** Chat interface + Daily tips
+
+CHATBOT:
+"Hi S101! Your Math scores dropped 18%. Here's your daily plan:
+1. Review Quiz3 Algebra (15min)
+2. Practice 5 similar problems
+3. Book 30min mentor session
+
+Daily Tip: Students who intervene early recover 92% of points!"
+
+[Quick Actions: Practice | Book Mentor | Track Progress]
+```
+
+***
+
+## 🧭 **NAVIGATION SYSTEM**
+
+```
+GLOBAL SIDEBAR (Always Visible):
+┌─ 👑 ADMIN ───────────────────────────────┐
+│ ○ College Overview ← Active             │
+│ ○ Risk Analytics                       │
+│ ○ Mentor Assignment                    │
+│                                         │
+├─ 👩‍🏫 TEACHER ──────────────────────────┤
+│ ○ Student Dashboard                    │
+│ ○ Intervention List                    │
+│ ○ My Analytics                         │
+│                                         │
+├─ 🧑‍🎓 STUDENT ──────────────────────────┤
+│ ○ My Progress                          │
+│ ○ AI Assistant                         │
+└─────────────────────────────────────────┘
+```
+
+***
+
+## 🎨 **VISUAL DESIGN SYSTEM**
+
+```
+COLOR PALETTE:
+🔴 #DC2626 High Risk / Urgent
+🟡 #F59E0B Warning / Medium  
+🟢 #10B981 Safe / Success
+🔵 #3B82F6 Primary / Links
+⚪ #F8FAFC Background
+⚫ #1E293B Text
+
+GAMIFICATION ELEMENTS:
+🏆 Level badges | 📈 XP Progress bars | ✅ Checkmarks
+🎖️ Rank numbers | 📊 Success percentages | 🚀 Action buttons
+
+TYPOGRAPHY:
+H1: 36px bold (Screen titles)
+H2: 24px bold (Sections)
+Metrics: 48px numbers
+Body: 16px regular
+```
+
+***
+
+## ⚙️ **DATA FLOW SPECIFICATION**
+
+```
+CSV INPUT:
+StudentID,Subject,Quiz1,Quiz2,Quiz3,Attendance,Teacher
+
+RISK ENGINE OUTPUT:
++ risk_level (HIGH/MEDIUM/LOW)
++ risk_reason (Decline/Attendance/Avg)
++ xp_score (Gamification)
++ level (1-20 based on performance)
++ success_rate (Interventions)
+
+SYNTHETIC DATA: 512 students × 4 subjects
+Physics: 35% high risk (Red cluster)
+Math: 22% high risk (Orange)
+Perfect heatmap crisis visualization
+```
+
+***
+
+## 💻 **STREAMLIT IMPLEMENTATION STRUCTURE**
+
+```
+app.py (450 lines organized):
+
+# 1. IMPORTS + CONFIG (Lines 1-25)
+import streamlit as st
+import plotly.express as px
+import pandas as pd
+import numpy as np
+
+# 2. RISK ENGINE + DATA GEN (Lines 26-100)
+def risk_scoring(df): ...
+def generate_demo_data(n=512): ...
+
+# 3. GLOBAL SIDEBAR (Lines 101-130)
+def render_sidebar():
+    st.sidebar.selectbox("Role", ["Admin", "Teacher", "Student"])
+
+# 4. LANDING PAGE (Lines 131-180)
+def landing_page(): ...
+
+# 5. ADMIN PAGES (Lines 181-300)
+def admin_overview(): ...
+def admin_analytics(): ...
+def admin_assignment(): ...
+
+# 6. TEACHER PAGES (Lines 301-380)
+def teacher_dashboard(): ...
+def teacher_interventions(): ...
+def teacher_analytics(): ...
+
+# 7. STUDENT PAGES (Lines 381-430)
+def student_dashboard(): ...
+def student_assistant(): ...
+
+# 8. MAIN APP FLOW (Lines 431-450)
+if role == "Admin": admin_overview()
+```
+
+***
+
+## 🎬 **DEMO FLOW PRIORITY (4 Minutes)**
+
+```
+[0:00-0:30] LANDING → CSV upload → "87 risks detected"
+[0:30-1:30] ADMIN OVERVIEW → Physics red crisis heatmap
+[1:30-2:30] TEACHER INTERVENTIONS → Toggle → Live 33% reduction
+[2:30-3:00] STUDENT DASHBOARD → Gamified XP + personal risks
+[3:00-4:00] "Works with ANY college CSV" + QR code
+```
+
+***
+
+## 🚀 **COMPLETE VIBE CODING PROMPT**
+
+```
+**Copy this EXACT prompt to Replit Ghostwriter:**
+
+"Build COMPLETE 8-page Streamlit app: AEWIS Academic Risk System.
+
+8 EXACT SCREENS:
+1. Landing: CSV upload + quick stats + role cards
+2. Admin Overview: LEFT KPIs | RIGHT Physics red heatmap crisis (px.imshow)
+3. Admin Analytics: 6 charts (pie/bar/line/scatter/trend/heatmap)
+4. Admin Assignment: Mentor queue table + auto-assign
+5. Teacher Student Dashboard: LEFT productivity nav | RIGHT student cards w/XP
+6. Teacher Interventions: Toggle list | Live risk reduction metrics
+7. Student Personal: Hero XP level | Progress metrics | Risk badges
+8. Student AI: Chatbot interface + daily learning tips
+
+GAMIFICATION: XP badges, levels 1-20, success %, rank #23/512
+COLORS: Red#DC2626 High | Yellow#F59E0B Warn | Green#10B981 Safe
+CSV: StudentID,Subject,Quiz1-3,Attendance,Teacher
+Risk rules: Attendance<75 OR Quiz1-3 decline>15% OR avg<40 = HIGH
+
+Include 512-row synthetic demo data w/Physics 35% crisis.
+Global sidebar role switching.
+Enterprise polish: Metrics 48px, rounded cards, hover effects.
+Deploy-ready w/ requirements.txt."
+
+**Expected Output:** app.py (450 lines) + demo_data.csv + instant deploy
+```
+
+***
+
+## ✅ **SUCCESS CRITERIA**
+
+```
+✅ 8 screens load instantly
+✅ Physics heatmap shows red crisis cluster  
+✅ Teacher toggles update risk count LIVE
+✅ Student XP gamification feels native
+✅ CSV upload handles judge edge cases
+✅ Triple deploy: Streamlit Cloud + Replit + Local
+✅ 4-minute demo flows flawlessly
+```
+
+**Status:** **PRINT-READY VIBE CODING SPEC.** Copy prompt → Replit → 18hr polish → **Hackathon domination.** 
+
+**Next:** Execute vibe prompt → Ping "code generated" → I optimize your 20% genius touches. 🏆
