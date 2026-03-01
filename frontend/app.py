@@ -11,6 +11,7 @@ Architecture:
 """
 
 import streamlit as st
+from backend_connector import *
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
