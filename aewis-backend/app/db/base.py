@@ -1,5 +1,5 @@
-from datetime import datetime
-from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime, Enum
+from datetime import datetime, timezone
+from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime
 from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
@@ -19,7 +19,7 @@ class Risk(Base):
     xp_score = Column(Integer, default=0)
     reason = Column(String(256), nullable=True)
     teacher_id = Column(String(64), nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
 
 class Intervention(Base):
@@ -31,4 +31,4 @@ class Intervention(Base):
     action = Column(String(64))
     success = Column(Boolean, default=False)
     xp_earned = Column(Integer, default=0)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
